@@ -3182,3 +3182,982 @@
 [2019-12-03 16:03:42,035] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
 [2019-12-03 16:03:42,090] - DEBUG: execute javascript: arguments[0].click();
 [2019-12-03 16:03:42,091] - INFO: click element: 保 存
+[2019-12-03 16:24:54,839] - WARNING: =========================START=========================
+
+[2019-12-03 16:24:54,840] - DEBUG: 测试用例开始执行:test_login_flow
+[2019-12-03 16:25:03,905] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:25:03,906] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:25:03,907] - INFO: driver_wait 10.
+[2019-12-03 16:25:03,966] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:03,978] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:04,979] - INFO: wait 0.500000 seconds
+[2019-12-03 16:25:05,269] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:25:05,270] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:25:05,271] - INFO: driver_wait 10.
+[2019-12-03 16:25:05,359] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:05,371] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:06,371] - INFO: wait 0.500000 seconds
+[2019-12-03 16:25:06,965] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:25:06,967] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:25:06,968] - INFO: driver_wait 10.
+[2019-12-03 16:25:07,027] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:07,037] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:07,180] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:25:07,182] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:25:07,184] - INFO: driver_wait 10.
+[2019-12-03 16:25:07,448] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:07,462] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:07,534] - INFO: click element: 多租户空库0814
+[2019-12-03 16:25:07,535] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:25:07,536] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:25:07,537] - INFO: driver_wait 10.
+[2019-12-03 16:25:11,870] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:11,891] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:15,017] - INFO: quit browser
+[2019-12-03 16:25:15,018] - DEBUG: 测试用例执行结束:test_login_flow
+[2019-12-03 16:25:15,019] - WARNING: ========================= END =========================
+
+[2019-12-03 16:25:15,020] - WARNING: =========================START=========================
+
+[2019-12-03 16:25:15,021] - DEBUG: 测试用例开始执行:test_wait_deal_flow
+[2019-12-03 16:25:24,439] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:25:24,440] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:25:24,441] - INFO: driver_wait 10.
+[2019-12-03 16:25:24,482] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:24,490] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:25,491] - INFO: wait 0.500000 seconds
+[2019-12-03 16:25:25,711] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:25:25,712] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:25:25,713] - INFO: driver_wait 10.
+[2019-12-03 16:25:25,774] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:25,782] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:26,783] - INFO: wait 0.500000 seconds
+[2019-12-03 16:25:27,074] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:25:27,075] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:25:27,077] - INFO: driver_wait 10.
+[2019-12-03 16:25:27,153] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:27,159] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:27,257] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:25:27,258] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:25:27,259] - INFO: driver_wait 10.
+[2019-12-03 16:25:27,433] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:27,440] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:27,501] - INFO: click element: 多租户空库0814
+[2019-12-03 16:25:27,501] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:25:27,502] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:25:27,503] - INFO: driver_wait 10.
+[2019-12-03 16:25:31,191] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:31,198] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:31,212] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:25:31,214] - INFO: driver_wait 10.
+[2019-12-03 16:25:31,266] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:31,283] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:31,311] - INFO: click element: #tabmore
+[2019-12-03 16:25:31,313] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:25:31,316] - INFO: driver_wait 10.
+[2019-12-03 16:25:31,557] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:31,574] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:31,868] - INFO: click element: 待办
+[2019-12-03 16:25:31,869] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX)
+[2019-12-03 16:25:31,871] - INFO: driver_wait 10.
+[2019-12-03 16:25:32,527] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:32,534] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:35,589] - INFO: quit browser
+[2019-12-03 16:25:35,590] - DEBUG: 测试用例执行结束:test_wait_deal_flow
+[2019-12-03 16:25:35,592] - WARNING: ========================= END =========================
+
+[2019-12-03 16:25:35,593] - WARNING: =========================START=========================
+
+[2019-12-03 16:25:35,594] - DEBUG: 测试用例开始执行:test_already_deal_flow
+[2019-12-03 16:25:44,520] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:25:44,521] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:25:44,522] - INFO: driver_wait 10.
+[2019-12-03 16:25:44,561] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:44,573] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:45,574] - INFO: wait 0.500000 seconds
+[2019-12-03 16:25:45,812] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:25:45,814] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:25:45,815] - INFO: driver_wait 10.
+[2019-12-03 16:25:45,868] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:45,875] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:46,876] - INFO: wait 0.500000 seconds
+[2019-12-03 16:25:47,178] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:25:47,179] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:25:47,180] - INFO: driver_wait 10.
+[2019-12-03 16:25:47,248] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:47,258] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:47,354] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:25:47,355] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:25:47,356] - INFO: driver_wait 10.
+[2019-12-03 16:25:47,592] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:47,601] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:47,658] - INFO: click element: 多租户空库0814
+[2019-12-03 16:25:47,659] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:25:47,660] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:25:47,661] - INFO: driver_wait 10.
+[2019-12-03 16:25:51,251] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:51,262] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:51,272] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:25:51,274] - INFO: driver_wait 10.
+[2019-12-03 16:25:51,337] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:51,344] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:51,374] - INFO: click element: #tabmore
+[2019-12-03 16:25:51,377] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:25:51,380] - INFO: driver_wait 10.
+[2019-12-03 16:25:51,620] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:51,631] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:52,007] - INFO: click element: 待办
+[2019-12-03 16:25:52,008] - DEBUG: find elements:(xpath, //*[text()='已办任务'])
+[2019-12-03 16:25:52,009] - INFO: driver_wait 10.
+[2019-12-03 16:25:52,566] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:52,573] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:52,885] - INFO: click element: 已办任务
+[2019-12-03 16:25:52,886] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX > div > div)
+[2019-12-03 16:25:52,889] - INFO: driver_wait 10.
+[2019-12-03 16:25:53,199] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:25:53,216] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:25:56,278] - INFO: quit browser
+[2019-12-03 16:25:56,280] - DEBUG: 测试用例执行结束:test_already_deal_flow
+[2019-12-03 16:25:56,281] - WARNING: ========================= END =========================
+
+[2019-12-03 16:25:56,283] - WARNING: =========================START=========================
+
+[2019-12-03 16:25:56,284] - DEBUG: 测试用例开始执行:test_cc_task_flow
+[2019-12-03 16:26:05,704] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:26:05,705] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:26:05,706] - INFO: driver_wait 10.
+[2019-12-03 16:26:05,757] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:05,772] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:06,773] - INFO: wait 0.500000 seconds
+[2019-12-03 16:26:07,026] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:26:07,027] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:26:07,028] - INFO: driver_wait 10.
+[2019-12-03 16:26:07,105] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:07,115] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:08,115] - INFO: wait 0.500000 seconds
+[2019-12-03 16:26:08,431] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:26:08,432] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:26:08,433] - INFO: driver_wait 10.
+[2019-12-03 16:26:08,480] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:08,488] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:08,595] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:26:08,596] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:26:08,597] - INFO: driver_wait 10.
+[2019-12-03 16:26:08,835] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:08,842] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:08,899] - INFO: click element: 多租户空库0814
+[2019-12-03 16:26:08,901] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:26:08,902] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:26:08,903] - INFO: driver_wait 10.
+[2019-12-03 16:26:12,321] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:12,333] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:12,348] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:26:12,351] - INFO: driver_wait 10.
+[2019-12-03 16:26:12,388] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:12,400] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:12,425] - INFO: click element: #tabmore
+[2019-12-03 16:26:12,427] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:26:12,428] - INFO: driver_wait 10.
+[2019-12-03 16:26:12,675] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:12,686] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:13,065] - INFO: click element: 待办
+[2019-12-03 16:26:13,066] - DEBUG: find elements:(xpath, //*[text()='抄送任务'])
+[2019-12-03 16:26:13,068] - INFO: driver_wait 10.
+[2019-12-03 16:26:13,610] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:13,617] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:13,824] - INFO: click element: 抄送任务
+[2019-12-03 16:26:13,827] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div)
+[2019-12-03 16:26:13,829] - INFO: driver_wait 10.
+[2019-12-03 16:26:14,112] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:14,146] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:17,277] - INFO: quit browser
+[2019-12-03 16:26:17,279] - DEBUG: 测试用例执行结束:test_cc_task_flow
+[2019-12-03 16:26:17,280] - WARNING: ========================= END =========================
+
+[2019-12-03 16:26:17,281] - WARNING: =========================START=========================
+
+[2019-12-03 16:26:17,282] - DEBUG: 测试用例开始执行:test_all_task_flow
+[2019-12-03 16:26:26,101] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:26:26,102] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:26:26,103] - INFO: driver_wait 10.
+[2019-12-03 16:26:26,154] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:26,166] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:27,167] - INFO: wait 0.500000 seconds
+[2019-12-03 16:26:27,470] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:26:27,471] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:26:27,473] - INFO: driver_wait 10.
+[2019-12-03 16:26:27,565] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:27,582] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:28,583] - INFO: wait 0.500000 seconds
+[2019-12-03 16:26:28,926] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:26:28,928] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:26:28,929] - INFO: driver_wait 10.
+[2019-12-03 16:26:29,004] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:29,016] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:29,125] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:26:29,126] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:26:29,127] - INFO: driver_wait 10.
+[2019-12-03 16:26:29,361] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:29,378] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:29,445] - INFO: click element: 多租户空库0814
+[2019-12-03 16:26:29,446] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:26:29,447] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:26:29,448] - INFO: driver_wait 10.
+[2019-12-03 16:26:34,184] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:34,192] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:34,207] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:26:34,209] - INFO: driver_wait 10.
+[2019-12-03 16:26:34,261] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:34,274] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:34,331] - INFO: click element: #tabmore
+[2019-12-03 16:26:34,332] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:26:34,333] - INFO: driver_wait 10.
+[2019-12-03 16:26:34,529] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:34,536] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:34,964] - INFO: click element: 待办
+[2019-12-03 16:26:34,965] - DEBUG: find elements:(xpath, //*[text()='全部任务'])
+[2019-12-03 16:26:34,966] - INFO: driver_wait 10.
+[2019-12-03 16:26:35,730] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:35,740] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:35,937] - INFO: click element: 全部任务
+[2019-12-03 16:26:35,940] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX)
+[2019-12-03 16:26:35,942] - INFO: driver_wait 10.
+[2019-12-03 16:26:36,259] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:36,267] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:39,354] - INFO: quit browser
+[2019-12-03 16:26:39,356] - DEBUG: 测试用例执行结束:test_all_task_flow
+[2019-12-03 16:26:39,357] - WARNING: ========================= END =========================
+
+[2019-12-03 16:26:39,358] - WARNING: =========================START=========================
+
+[2019-12-03 16:26:39,359] - DEBUG: 测试用例开始执行:test_my_concern_flow
+[2019-12-03 16:26:49,417] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:26:49,419] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:26:49,420] - INFO: driver_wait 10.
+[2019-12-03 16:26:49,468] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:49,478] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:50,479] - INFO: wait 0.500000 seconds
+[2019-12-03 16:26:50,730] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:26:50,731] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:26:50,732] - INFO: driver_wait 10.
+[2019-12-03 16:26:50,785] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:50,793] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:51,793] - INFO: wait 0.500000 seconds
+[2019-12-03 16:26:52,116] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:26:52,117] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:26:52,119] - INFO: driver_wait 10.
+[2019-12-03 16:26:52,173] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:52,180] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:52,285] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:26:52,286] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:26:52,288] - INFO: driver_wait 10.
+[2019-12-03 16:26:52,538] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:52,546] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:52,619] - INFO: click element: 多租户空库0814
+[2019-12-03 16:26:52,620] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:26:52,621] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:26:52,622] - INFO: driver_wait 10.
+[2019-12-03 16:26:57,523] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:57,530] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:57,559] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:26:57,560] - INFO: driver_wait 10.
+[2019-12-03 16:26:57,602] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:57,609] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:57,636] - INFO: click element: #tabmore
+[2019-12-03 16:26:57,640] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:26:57,644] - INFO: driver_wait 10.
+[2019-12-03 16:26:57,930] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:57,949] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:58,402] - INFO: click element: 待办
+[2019-12-03 16:26:58,403] - DEBUG: find elements:(xpath, //*[text()='我关注的'])
+[2019-12-03 16:26:58,404] - INFO: driver_wait 10.
+[2019-12-03 16:26:58,979] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:58,987] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:26:59,160] - INFO: click element: 我关注的
+[2019-12-03 16:26:59,163] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div)
+[2019-12-03 16:26:59,165] - INFO: driver_wait 10.
+[2019-12-03 16:26:59,509] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:26:59,544] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:02,683] - INFO: quit browser
+[2019-12-03 16:27:02,684] - DEBUG: 测试用例执行结束:test_my_concern_flow
+[2019-12-03 16:27:02,685] - WARNING: ========================= END =========================
+
+[2019-12-03 16:27:02,686] - WARNING: =========================START=========================
+
+[2019-12-03 16:27:02,687] - DEBUG: 测试用例开始执行:test_message_reminder_flow
+[2019-12-03 16:27:11,685] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:27:11,686] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:27:11,687] - INFO: driver_wait 10.
+[2019-12-03 16:27:11,734] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:11,746] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:12,746] - INFO: wait 0.500000 seconds
+[2019-12-03 16:27:12,997] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:27:12,998] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:27:12,999] - INFO: driver_wait 10.
+[2019-12-03 16:27:13,061] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:13,074] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:14,076] - INFO: wait 0.500000 seconds
+[2019-12-03 16:27:14,418] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:27:14,420] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:27:14,422] - INFO: driver_wait 10.
+[2019-12-03 16:27:14,482] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:14,491] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:14,670] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:27:14,672] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:27:14,673] - INFO: driver_wait 10.
+[2019-12-03 16:27:14,926] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:14,938] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:15,021] - INFO: click element: 多租户空库0814
+[2019-12-03 16:27:15,022] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:27:15,023] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:27:15,024] - INFO: driver_wait 10.
+[2019-12-03 16:27:19,637] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:19,653] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:19,671] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:27:19,672] - INFO: driver_wait 10.
+[2019-12-03 16:27:19,721] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:19,737] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:19,764] - INFO: click element: #tabmore
+[2019-12-03 16:27:19,765] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:27:19,766] - INFO: driver_wait 10.
+[2019-12-03 16:27:20,012] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:20,028] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:20,445] - INFO: click element: 待办
+[2019-12-03 16:27:20,447] - DEBUG: find elements:(xpath, //*[text()='消息提醒'])
+[2019-12-03 16:27:20,449] - INFO: driver_wait 10.
+[2019-12-03 16:27:21,086] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:21,095] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:25,889] - INFO: click element: 消息提醒
+[2019-12-03 16:27:25,890] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div > div)
+[2019-12-03 16:27:25,891] - INFO: driver_wait 10.
+[2019-12-03 16:27:26,139] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:26,175] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:29,252] - INFO: quit browser
+[2019-12-03 16:27:29,253] - DEBUG: 测试用例执行结束:test_message_reminder_flow
+[2019-12-03 16:27:29,253] - WARNING: ========================= END =========================
+
+[2019-12-03 16:27:29,254] - WARNING: =========================START=========================
+
+[2019-12-03 16:27:29,255] - DEBUG: 测试用例开始执行:test_mobile_login_flow
+[2019-12-03 16:27:38,854] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:27:38,855] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:27:38,856] - INFO: driver_wait 10.
+[2019-12-03 16:27:38,904] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:38,915] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:39,915] - INFO: wait 0.500000 seconds
+[2019-12-03 16:27:40,132] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:27:40,134] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:27:40,136] - INFO: driver_wait 10.
+[2019-12-03 16:27:40,177] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:40,184] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:41,185] - INFO: wait 0.500000 seconds
+[2019-12-03 16:27:41,459] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:27:41,460] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:27:41,461] - INFO: driver_wait 10.
+[2019-12-03 16:27:41,509] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:41,516] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:41,624] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:27:41,625] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:27:41,627] - INFO: driver_wait 10.
+[2019-12-03 16:27:41,825] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:41,831] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:41,887] - INFO: click element: 多租户空库0814
+[2019-12-03 16:27:41,888] - DEBUG: find elements:(css selector, #root > div > div > div.home_tabbar___2b8uE > div > div > div > div > div:nth-child(3) > p)
+[2019-12-03 16:27:41,889] - INFO: driver_wait 10.
+[2019-12-03 16:27:44,251] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:44,260] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:44,379] - INFO: click element: #root > div > div > div.home_tabbar___2b8uE > div > div > div > div > div:nth-child(3) > p
+[2019-12-03 16:27:44,381] - DEBUG: get attributes to element:(css selector, #root > div > div > div.content___ItU_U > div.top___3gs4z > div.am-list.avatar___1dflk > div > div > div.am-list-line.am-list-line-multiple > div.am-list-content) name: text
+[2019-12-03 16:27:44,382] - DEBUG: find elements:(css selector, #root > div > div > div.content___ItU_U > div.top___3gs4z > div.am-list.avatar___1dflk > div > div > div.am-list-line.am-list-line-multiple > div.am-list-content)
+[2019-12-03 16:27:44,383] - INFO: driver_wait 10.
+[2019-12-03 16:27:44,439] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:27:44,447] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:27:47,646] - INFO: quit browser
+[2019-12-03 16:27:47,647] - DEBUG: 测试用例执行结束:test_mobile_login_flow
+[2019-12-03 16:27:47,648] - WARNING: ========================= END =========================
+
+[2019-12-03 16:28:04,646] - WARNING: =========================START=========================
+
+[2019-12-03 16:28:04,648] - DEBUG: 测试用例开始执行:test_login_flow
+[2019-12-03 16:28:13,924] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:28:13,925] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:28:13,926] - INFO: driver_wait 10.
+[2019-12-03 16:28:13,972] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:13,982] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:14,983] - INFO: wait 0.500000 seconds
+[2019-12-03 16:28:15,259] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:28:15,259] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:28:15,260] - INFO: driver_wait 10.
+[2019-12-03 16:28:15,306] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:15,315] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:16,316] - INFO: wait 0.500000 seconds
+[2019-12-03 16:28:16,601] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:28:16,603] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:28:16,604] - INFO: driver_wait 10.
+[2019-12-03 16:28:16,646] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:16,656] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:16,758] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:28:16,760] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:28:16,762] - INFO: driver_wait 10.
+[2019-12-03 16:28:16,942] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:16,948] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:17,006] - INFO: click element: 多租户空库0814
+[2019-12-03 16:28:17,007] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:28:17,007] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:28:17,008] - INFO: driver_wait 10.
+[2019-12-03 16:28:21,771] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:21,778] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:24,961] - INFO: quit browser
+[2019-12-03 16:28:24,962] - DEBUG: 测试用例执行结束:test_login_flow
+[2019-12-03 16:28:24,963] - WARNING: ========================= END =========================
+
+[2019-12-03 16:28:24,977] - WARNING: =========================START=========================
+
+[2019-12-03 16:28:24,978] - DEBUG: 测试用例开始执行:test_wait_deal_flow
+[2019-12-03 16:28:34,376] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:28:34,377] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:28:34,378] - INFO: driver_wait 10.
+[2019-12-03 16:28:34,418] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:34,428] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:35,429] - INFO: wait 0.500000 seconds
+[2019-12-03 16:28:35,641] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:28:35,642] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:28:35,644] - INFO: driver_wait 10.
+[2019-12-03 16:28:35,686] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:35,692] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:36,693] - INFO: wait 0.500000 seconds
+[2019-12-03 16:28:36,998] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:28:36,999] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:28:37,001] - INFO: driver_wait 10.
+[2019-12-03 16:28:37,071] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:37,079] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:37,208] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:28:37,209] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:28:37,210] - INFO: driver_wait 10.
+[2019-12-03 16:28:37,390] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:37,397] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:37,452] - INFO: click element: 多租户空库0814
+[2019-12-03 16:28:37,454] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:28:37,454] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:28:37,455] - INFO: driver_wait 10.
+[2019-12-03 16:28:43,149] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:43,160] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:43,176] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:28:43,178] - INFO: driver_wait 10.
+[2019-12-03 16:28:43,216] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:43,227] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:43,262] - INFO: click element: #tabmore
+[2019-12-03 16:28:43,263] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:28:43,264] - INFO: driver_wait 10.
+[2019-12-03 16:28:43,488] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:43,502] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:43,844] - INFO: click element: 待办
+[2019-12-03 16:28:43,846] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX)
+[2019-12-03 16:28:43,847] - INFO: driver_wait 10.
+[2019-12-03 16:28:44,550] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:44,555] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:47,686] - INFO: quit browser
+[2019-12-03 16:28:47,688] - DEBUG: 测试用例执行结束:test_wait_deal_flow
+[2019-12-03 16:28:47,689] - WARNING: ========================= END =========================
+
+[2019-12-03 16:28:47,705] - WARNING: =========================START=========================
+
+[2019-12-03 16:28:47,706] - DEBUG: 测试用例开始执行:test_already_deal_flow
+[2019-12-03 16:28:57,541] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:28:57,542] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:28:57,542] - INFO: driver_wait 10.
+[2019-12-03 16:28:57,581] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:57,591] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:58,591] - INFO: wait 0.500000 seconds
+[2019-12-03 16:28:58,885] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:28:58,887] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:28:58,888] - INFO: driver_wait 10.
+[2019-12-03 16:28:58,940] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:28:58,946] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:28:59,947] - INFO: wait 0.500000 seconds
+[2019-12-03 16:29:00,267] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:29:00,268] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:29:00,269] - INFO: driver_wait 10.
+[2019-12-03 16:29:00,321] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:00,329] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:00,446] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:29:00,448] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:29:00,450] - INFO: driver_wait 10.
+[2019-12-03 16:29:00,638] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:00,646] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:00,710] - INFO: click element: 多租户空库0814
+[2019-12-03 16:29:00,711] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:29:00,713] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:29:00,713] - INFO: driver_wait 10.
+[2019-12-03 16:29:05,291] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:05,310] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:05,327] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:29:05,329] - INFO: driver_wait 10.
+[2019-12-03 16:29:05,366] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:05,372] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:05,402] - INFO: click element: #tabmore
+[2019-12-03 16:29:05,404] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:29:05,406] - INFO: driver_wait 10.
+[2019-12-03 16:29:05,605] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:05,612] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:05,951] - INFO: click element: 待办
+[2019-12-03 16:29:05,953] - DEBUG: find elements:(xpath, //*[text()='已办任务'])
+[2019-12-03 16:29:05,954] - INFO: driver_wait 10.
+[2019-12-03 16:29:07,424] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:07,433] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:07,705] - INFO: click element: 已办任务
+[2019-12-03 16:29:07,706] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX > div > div)
+[2019-12-03 16:29:07,707] - INFO: driver_wait 10.
+[2019-12-03 16:29:07,938] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:07,952] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:11,008] - INFO: quit browser
+[2019-12-03 16:29:11,010] - DEBUG: 测试用例执行结束:test_already_deal_flow
+[2019-12-03 16:29:11,011] - WARNING: ========================= END =========================
+
+[2019-12-03 16:29:11,027] - WARNING: =========================START=========================
+
+[2019-12-03 16:29:11,028] - DEBUG: 测试用例开始执行:test_cc_task_flow
+[2019-12-03 16:29:20,962] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:29:20,963] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:29:20,963] - INFO: driver_wait 10.
+[2019-12-03 16:29:21,001] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:21,012] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:22,013] - INFO: wait 0.500000 seconds
+[2019-12-03 16:29:22,235] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:29:22,236] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:29:22,237] - INFO: driver_wait 10.
+[2019-12-03 16:29:22,290] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:22,304] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:23,305] - INFO: wait 0.500000 seconds
+[2019-12-03 16:29:23,591] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:29:23,592] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:29:23,593] - INFO: driver_wait 10.
+[2019-12-03 16:29:23,640] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:23,648] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:23,750] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:29:23,752] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:29:23,753] - INFO: driver_wait 10.
+[2019-12-03 16:29:23,918] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:23,928] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:23,979] - INFO: click element: 多租户空库0814
+[2019-12-03 16:29:23,980] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:29:23,981] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:29:23,981] - INFO: driver_wait 10.
+[2019-12-03 16:29:28,815] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:28,822] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:28,833] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:29:28,835] - INFO: driver_wait 10.
+[2019-12-03 16:29:28,875] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:28,882] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:28,908] - INFO: click element: #tabmore
+[2019-12-03 16:29:28,909] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:29:28,910] - INFO: driver_wait 10.
+[2019-12-03 16:29:29,132] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:29,143] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:29,514] - INFO: click element: 待办
+[2019-12-03 16:29:29,515] - DEBUG: find elements:(xpath, //*[text()='抄送任务'])
+[2019-12-03 16:29:29,517] - INFO: driver_wait 10.
+[2019-12-03 16:29:30,063] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:30,068] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:30,309] - INFO: click element: 抄送任务
+[2019-12-03 16:29:30,311] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div)
+[2019-12-03 16:29:30,314] - INFO: driver_wait 10.
+[2019-12-03 16:29:30,624] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:30,640] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:33,714] - INFO: quit browser
+[2019-12-03 16:29:33,716] - DEBUG: 测试用例执行结束:test_cc_task_flow
+[2019-12-03 16:29:33,717] - WARNING: ========================= END =========================
+
+[2019-12-03 16:29:33,731] - WARNING: =========================START=========================
+
+[2019-12-03 16:29:33,732] - DEBUG: 测试用例开始执行:test_all_task_flow
+[2019-12-03 16:29:43,489] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:29:43,490] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:29:43,491] - INFO: driver_wait 10.
+[2019-12-03 16:29:43,544] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:43,559] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:44,560] - INFO: wait 0.500000 seconds
+[2019-12-03 16:29:44,787] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:29:44,788] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:29:44,789] - INFO: driver_wait 10.
+[2019-12-03 16:29:44,836] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:44,849] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:45,849] - INFO: wait 0.500000 seconds
+[2019-12-03 16:29:46,130] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:29:46,131] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:29:46,132] - INFO: driver_wait 10.
+[2019-12-03 16:29:46,180] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:46,186] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:46,300] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:29:46,301] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:29:46,302] - INFO: driver_wait 10.
+[2019-12-03 16:29:46,494] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:46,504] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:46,597] - INFO: click element: 多租户空库0814
+[2019-12-03 16:29:46,598] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:29:46,599] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:29:46,600] - INFO: driver_wait 10.
+[2019-12-03 16:29:52,082] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:52,093] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:52,102] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:29:52,103] - INFO: driver_wait 10.
+[2019-12-03 16:29:52,161] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:52,176] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:52,212] - INFO: click element: #tabmore
+[2019-12-03 16:29:52,215] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:29:52,217] - INFO: driver_wait 10.
+[2019-12-03 16:29:52,419] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:52,435] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:52,784] - INFO: click element: 待办
+[2019-12-03 16:29:52,785] - DEBUG: find elements:(xpath, //*[text()='全部任务'])
+[2019-12-03 16:29:52,787] - INFO: driver_wait 10.
+[2019-12-03 16:29:53,404] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:53,411] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:53,624] - INFO: click element: 全部任务
+[2019-12-03 16:29:53,625] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX)
+[2019-12-03 16:29:53,626] - INFO: driver_wait 10.
+[2019-12-03 16:29:53,883] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:29:53,894] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:29:56,982] - INFO: quit browser
+[2019-12-03 16:29:56,983] - DEBUG: 测试用例执行结束:test_all_task_flow
+[2019-12-03 16:29:56,985] - WARNING: ========================= END =========================
+
+[2019-12-03 16:29:56,993] - WARNING: =========================START=========================
+
+[2019-12-03 16:29:56,994] - DEBUG: 测试用例开始执行:test_my_concern_flow
+[2019-12-03 16:30:06,726] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:30:06,728] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:30:06,729] - INFO: driver_wait 10.
+[2019-12-03 16:30:06,779] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:06,792] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:07,792] - INFO: wait 0.500000 seconds
+[2019-12-03 16:30:08,147] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:30:08,149] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:30:08,150] - INFO: driver_wait 10.
+[2019-12-03 16:30:08,224] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:08,246] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:09,248] - INFO: wait 0.500000 seconds
+[2019-12-03 16:30:09,532] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:30:09,533] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:30:09,534] - INFO: driver_wait 10.
+[2019-12-03 16:30:09,584] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:09,592] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:09,683] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:30:09,683] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:30:09,684] - INFO: driver_wait 10.
+[2019-12-03 16:30:09,903] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:09,917] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:09,986] - INFO: click element: 多租户空库0814
+[2019-12-03 16:30:09,987] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:30:09,988] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:30:09,989] - INFO: driver_wait 10.
+[2019-12-03 16:30:14,995] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:15,313] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:15,330] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:30:15,331] - INFO: driver_wait 10.
+[2019-12-03 16:30:15,373] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:15,386] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:15,415] - INFO: click element: #tabmore
+[2019-12-03 16:30:15,417] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:30:15,419] - INFO: driver_wait 10.
+[2019-12-03 16:30:15,620] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:15,630] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:15,967] - INFO: click element: 待办
+[2019-12-03 16:30:15,968] - DEBUG: find elements:(xpath, //*[text()='我关注的'])
+[2019-12-03 16:30:15,969] - INFO: driver_wait 10.
+[2019-12-03 16:30:16,632] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:16,641] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:16,844] - INFO: click element: 我关注的
+[2019-12-03 16:30:16,846] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div)
+[2019-12-03 16:30:16,849] - INFO: driver_wait 10.
+[2019-12-03 16:30:17,103] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:17,113] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:20,483] - INFO: quit browser
+[2019-12-03 16:30:20,484] - DEBUG: 测试用例执行结束:test_my_concern_flow
+[2019-12-03 16:30:20,485] - WARNING: ========================= END =========================
+
+[2019-12-03 16:30:20,493] - WARNING: =========================START=========================
+
+[2019-12-03 16:30:20,494] - DEBUG: 测试用例开始执行:test_message_reminder_flow
+[2019-12-03 16:30:29,734] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:30:29,736] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:30:29,737] - INFO: driver_wait 10.
+[2019-12-03 16:30:29,801] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:29,818] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:30,819] - INFO: wait 0.500000 seconds
+[2019-12-03 16:30:31,139] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:30:31,141] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:30:31,143] - INFO: driver_wait 10.
+[2019-12-03 16:30:31,199] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:31,210] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:32,212] - INFO: wait 0.500000 seconds
+[2019-12-03 16:30:32,521] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:30:32,523] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:30:32,524] - INFO: driver_wait 10.
+[2019-12-03 16:30:32,569] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:32,576] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:32,668] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:30:32,669] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:30:32,670] - INFO: driver_wait 10.
+[2019-12-03 16:30:32,843] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:32,850] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:32,907] - INFO: click element: 多租户空库0814
+[2019-12-03 16:30:32,908] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:30:32,910] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:30:32,911] - INFO: driver_wait 10.
+[2019-12-03 16:30:37,202] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:37,215] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:37,228] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:30:37,230] - INFO: driver_wait 10.
+[2019-12-03 16:30:37,278] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:37,294] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:37,332] - INFO: click element: #tabmore
+[2019-12-03 16:30:37,334] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:30:37,336] - INFO: driver_wait 10.
+[2019-12-03 16:30:37,579] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:37,594] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:37,973] - INFO: click element: 待办
+[2019-12-03 16:30:37,974] - DEBUG: find elements:(xpath, //*[text()='消息提醒'])
+[2019-12-03 16:30:37,975] - INFO: driver_wait 10.
+[2019-12-03 16:30:38,600] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:38,615] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:38,879] - INFO: click element: 消息提醒
+[2019-12-03 16:30:38,881] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div > div)
+[2019-12-03 16:30:38,882] - INFO: driver_wait 10.
+[2019-12-03 16:30:39,008] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:39,014] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:42,076] - INFO: quit browser
+[2019-12-03 16:30:42,078] - DEBUG: 测试用例执行结束:test_message_reminder_flow
+[2019-12-03 16:30:42,079] - WARNING: ========================= END =========================
+
+[2019-12-03 16:30:42,096] - WARNING: =========================START=========================
+
+[2019-12-03 16:30:42,098] - DEBUG: 测试用例开始执行:test_mobile_login_flow
+[2019-12-03 16:30:51,780] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:30:51,781] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:30:51,782] - INFO: driver_wait 10.
+[2019-12-03 16:30:51,829] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:51,849] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:52,850] - INFO: wait 0.500000 seconds
+[2019-12-03 16:30:53,080] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:30:53,081] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:30:53,082] - INFO: driver_wait 10.
+[2019-12-03 16:30:53,132] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:53,142] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:54,143] - INFO: wait 0.500000 seconds
+[2019-12-03 16:30:54,422] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:30:54,423] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:30:54,424] - INFO: driver_wait 10.
+[2019-12-03 16:30:54,466] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:54,474] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:54,576] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:30:54,578] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:30:54,579] - INFO: driver_wait 10.
+[2019-12-03 16:30:54,747] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:54,757] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:54,814] - INFO: click element: 多租户空库0814
+[2019-12-03 16:30:54,815] - DEBUG: find elements:(css selector, #root > div > div > div.home_tabbar___2b8uE > div > div > div > div > div:nth-child(3) > p)
+[2019-12-03 16:30:54,816] - INFO: driver_wait 10.
+[2019-12-03 16:30:56,880] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:56,890] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:30:57,042] - INFO: click element: #root > div > div > div.home_tabbar___2b8uE > div > div > div > div > div:nth-child(3) > p
+[2019-12-03 16:30:57,044] - DEBUG: get attributes to element:(css selector, #root > div > div > div.content___ItU_U > div.top___3gs4z > div.am-list.avatar___1dflk > div > div > div.am-list-line.am-list-line-multiple > div.am-list-content) name: text
+[2019-12-03 16:30:57,045] - DEBUG: find elements:(css selector, #root > div > div > div.content___ItU_U > div.top___3gs4z > div.am-list.avatar___1dflk > div > div > div.am-list-line.am-list-line-multiple > div.am-list-content)
+[2019-12-03 16:30:57,046] - INFO: driver_wait 10.
+[2019-12-03 16:30:57,138] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:30:57,146] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:31:00,274] - INFO: quit browser
+[2019-12-03 16:31:00,275] - DEBUG: 测试用例执行结束:test_mobile_login_flow
+[2019-12-03 16:31:00,276] - WARNING: ========================= END =========================
+
+[2019-12-03 16:35:04,274] - WARNING: =========================START=========================
+
+[2019-12-03 16:35:04,275] - DEBUG: 测试用例开始执行:test_all_flow
+[2019-12-03 16:35:12,895] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:35:12,896] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:35:12,897] - INFO: driver_wait 10.
+[2019-12-03 16:35:12,944] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:12,955] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:13,956] - INFO: wait 0.500000 seconds
+[2019-12-03 16:35:14,196] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:35:14,197] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:35:14,199] - INFO: driver_wait 10.
+[2019-12-03 16:35:14,244] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:14,252] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:15,253] - INFO: wait 0.500000 seconds
+[2019-12-03 16:35:15,554] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:35:15,555] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:35:15,556] - INFO: driver_wait 10.
+[2019-12-03 16:35:15,615] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:15,621] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:15,707] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:35:15,709] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:35:15,710] - INFO: driver_wait 10.
+[2019-12-03 16:35:15,951] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:15,959] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:16,011] - INFO: click element: 多租户空库0814
+[2019-12-03 16:35:16,012] - DEBUG: get attributes to element:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span) name: title
+[2019-12-03 16:35:16,013] - DEBUG: find elements:(css selector, #components-layout-top > ul > li:nth-child(4) > div > span)
+[2019-12-03 16:35:16,014] - INFO: driver_wait 10.
+[2019-12-03 16:35:19,056] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:19,067] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:19,105] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:35:19,106] - INFO: driver_wait 10.
+[2019-12-03 16:35:19,143] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:19,151] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:19,177] - INFO: click element: #tabmore
+[2019-12-03 16:35:19,178] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:35:19,180] - INFO: driver_wait 10.
+[2019-12-03 16:35:19,453] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:19,466] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:19,808] - INFO: click element: 待办
+[2019-12-03 16:35:19,809] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX)
+[2019-12-03 16:35:19,811] - INFO: driver_wait 10.
+[2019-12-03 16:35:20,295] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:20,302] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:20,303] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:35:20,303] - INFO: driver_wait 10.
+[2019-12-03 16:35:20,337] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:20,343] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:20,375] - INFO: click element: #tabmore
+[2019-12-03 16:35:20,377] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:35:20,380] - INFO: driver_wait 10.
+[2019-12-03 16:35:20,705] - INFO: click element: 待办
+[2019-12-03 16:35:20,706] - DEBUG: find elements:(xpath, //*[text()='抄送任务'])
+[2019-12-03 16:35:20,707] - INFO: driver_wait 10.
+[2019-12-03 16:35:21,035] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:21,042] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:21,207] - INFO: click element: 抄送任务
+[2019-12-03 16:35:21,208] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div)
+[2019-12-03 16:35:21,210] - INFO: driver_wait 10.
+[2019-12-03 16:35:21,440] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:21,451] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:21,452] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:35:21,454] - INFO: driver_wait 10.
+[2019-12-03 16:35:21,499] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:21,506] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:21,538] - INFO: click element: #tabmore
+[2019-12-03 16:35:21,539] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:35:21,540] - INFO: driver_wait 10.
+[2019-12-03 16:35:21,738] - INFO: click element: 待办
+[2019-12-03 16:35:21,740] - DEBUG: find elements:(xpath, //*[text()='已办任务'])
+[2019-12-03 16:35:21,741] - INFO: driver_wait 10.
+[2019-12-03 16:35:22,154] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:22,160] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:22,300] - INFO: click element: 已办任务
+[2019-12-03 16:35:22,302] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX > div > div)
+[2019-12-03 16:35:22,303] - INFO: driver_wait 10.
+[2019-12-03 16:35:22,592] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:22,604] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:22,606] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:35:22,607] - INFO: driver_wait 10.
+[2019-12-03 16:35:22,649] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:22,655] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:22,677] - INFO: click element: #tabmore
+[2019-12-03 16:35:22,679] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:35:22,680] - INFO: driver_wait 10.
+[2019-12-03 16:35:22,870] - INFO: click element: 待办
+[2019-12-03 16:35:22,871] - DEBUG: find elements:(xpath, //*[text()='全部任务'])
+[2019-12-03 16:35:22,873] - INFO: driver_wait 10.
+[2019-12-03 16:35:23,149] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:23,157] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:23,304] - INFO: click element: 全部任务
+[2019-12-03 16:35:23,307] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div.components-todo-formcontent__record_lists--29V_wNCX)
+[2019-12-03 16:35:23,309] - INFO: driver_wait 10.
+[2019-12-03 16:35:23,531] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:23,539] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:23,540] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:35:23,541] - INFO: driver_wait 10.
+[2019-12-03 16:35:23,583] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:23,588] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:23,617] - INFO: click element: #tabmore
+[2019-12-03 16:35:23,618] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:35:23,618] - INFO: driver_wait 10.
+[2019-12-03 16:35:23,816] - INFO: click element: 待办
+[2019-12-03 16:35:23,817] - DEBUG: find elements:(xpath, //*[text()='@我的'])
+[2019-12-03 16:35:23,818] - INFO: driver_wait 10.
+[2019-12-03 16:35:24,076] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:24,084] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:24,246] - INFO: click element: @我的
+[2019-12-03 16:35:24,248] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div)
+[2019-12-03 16:35:24,251] - INFO: driver_wait 10.
+[2019-12-03 16:35:24,481] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:24,488] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:24,489] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:35:24,490] - INFO: driver_wait 10.
+[2019-12-03 16:35:24,534] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:24,539] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:24,569] - INFO: click element: #tabmore
+[2019-12-03 16:35:24,570] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:35:24,570] - INFO: driver_wait 10.
+[2019-12-03 16:35:24,767] - INFO: click element: 待办
+[2019-12-03 16:35:24,768] - DEBUG: find elements:(xpath, //*[text()='我关注的'])
+[2019-12-03 16:35:24,769] - INFO: driver_wait 10.
+[2019-12-03 16:35:25,025] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:25,033] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:25,171] - INFO: click element: 我关注的
+[2019-12-03 16:35:25,173] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div)
+[2019-12-03 16:35:25,175] - INFO: driver_wait 10.
+[2019-12-03 16:35:25,407] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:25,416] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:25,417] - DEBUG: find elements:(css selector, #tabmore)
+[2019-12-03 16:35:25,418] - INFO: driver_wait 10.
+[2019-12-03 16:35:25,468] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:25,473] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:25,499] - INFO: click element: #tabmore
+[2019-12-03 16:35:25,500] - DEBUG: find elements:(xpath, //*[text()='待办'])
+[2019-12-03 16:35:25,501] - INFO: driver_wait 10.
+[2019-12-03 16:35:25,700] - INFO: click element: 待办
+[2019-12-03 16:35:25,703] - DEBUG: find elements:(xpath, //*[text()='消息提醒'])
+[2019-12-03 16:35:25,705] - INFO: driver_wait 10.
+[2019-12-03 16:35:25,960] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:25,967] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:26,091] - INFO: click element: 消息提醒
+[2019-12-03 16:35:26,093] - DEBUG: find elements:(css selector, #root > div > section > section > section > main > section > section > main > section > main > div > div > div)
+[2019-12-03 16:35:26,096] - INFO: driver_wait 10.
+[2019-12-03 16:35:26,272] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:26,283] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:29,361] - INFO: quit browser
+[2019-12-03 16:35:29,363] - DEBUG: 测试用例执行结束:test_all_flow
+[2019-12-03 16:35:29,364] - WARNING: ========================= END =========================
+
+[2019-12-03 16:35:29,365] - WARNING: =========================START=========================
+
+[2019-12-03 16:35:29,366] - DEBUG: 测试用例开始执行:test_mobile_login_flow
+[2019-12-03 16:35:38,539] - INFO: open the page: http://app.yuanian.com/ecs-cloudplatform-api/index.html#/login?lang=zh_CN&sourceSite=4&sourceLogo=&source=%E4%BC%81%E4%B8%9A%E8%87%AA%E6%B3%A8%E5%86%8C&goto=/register&v=2019111901
+[2019-12-03 16:35:38,540] - DEBUG: find elements:(css selector, #loginName)
+[2019-12-03 16:35:38,541] - INFO: driver_wait 10.
+[2019-12-03 16:35:38,589] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:38,602] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:39,605] - INFO: wait 0.500000 seconds
+[2019-12-03 16:35:39,886] - INFO: send keys to element: #loginName value: tong
+[2019-12-03 16:35:39,887] - DEBUG: find elements:(css selector, #pwd)
+[2019-12-03 16:35:39,889] - INFO: driver_wait 10.
+[2019-12-03 16:35:39,962] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:39,974] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:40,975] - INFO: wait 0.500000 seconds
+[2019-12-03 16:35:41,301] - INFO: send keys to element: #pwd value: 123456
+[2019-12-03 16:35:41,302] - DEBUG: find elements:(css selector, #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button)
+[2019-12-03 16:35:41,304] - INFO: driver_wait 10.
+[2019-12-03 16:35:41,363] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:41,372] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:41,490] - INFO: click element: #components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button
+[2019-12-03 16:35:41,491] - DEBUG: find elements:(xpath, //*[text()='多租户空库0814'])
+[2019-12-03 16:35:41,492] - INFO: driver_wait 10.
+[2019-12-03 16:35:41,752] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:41,768] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:41,840] - INFO: click element: 多租户空库0814
+[2019-12-03 16:35:41,841] - DEBUG: find elements:(css selector, #root > div > div > div.home_tabbar___2b8uE > div > div > div > div > div:nth-child(3) > p)
+[2019-12-03 16:35:41,841] - INFO: driver_wait 10.
+[2019-12-03 16:35:43,985] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:43,996] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:44,081] - INFO: click element: #root > div > div > div.home_tabbar___2b8uE > div > div > div > div > div:nth-child(3) > p
+[2019-12-03 16:35:44,083] - DEBUG: get attributes to element:(css selector, #root > div > div > div.content___ItU_U > div.top___3gs4z > div.am-list.avatar___1dflk > div > div > div.am-list-line.am-list-line-multiple > div.am-list-content) name: text
+[2019-12-03 16:35:44,084] - DEBUG: find elements:(css selector, #root > div > div > div.content___ItU_U > div.top___3gs4z > div.am-list.avatar___1dflk > div > div > div.am-list-line.am-list-line-multiple > div.am-list-content)
+[2019-12-03 16:35:44,085] - INFO: driver_wait 10.
+[2019-12-03 16:35:44,134] - DEBUG: execute javascript: arguments[0].focus();
+[2019-12-03 16:35:44,145] - DEBUG: execute javascript: arguments[0].setAttribute('style', 'border: 2px solid red;');
+[2019-12-03 16:35:47,241] - INFO: quit browser
+[2019-12-03 16:35:47,242] - DEBUG: 测试用例执行结束:test_mobile_login_flow
+[2019-12-03 16:35:47,243] - WARNING: ========================= END =========================
+
