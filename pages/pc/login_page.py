@@ -17,7 +17,7 @@ class LoginPage(MainTesting):
         self.driver.click(enterprise)
         mark = self.driver.get_attribute(selector='#components-layout-top > ul > li:nth-child(4) > div > span',
                                          attr='title')
-        assert mark == assert_value
+        assert mark in assert_value
 
 
 

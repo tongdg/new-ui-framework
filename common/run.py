@@ -3,6 +3,11 @@
 
 '2019-11-30 Created by tongdg'
 
+# 解决jenkins部署需要配置PYTHONPATH的问题
+import sys
+from config.setting import BASE_PATH
+sys.path.append(BASE_PATH)
+# ---------------------------------
 from common.my_test import MyTest, MyMobileTest
 from data import flow_list
 import unittest
@@ -10,6 +15,7 @@ from utils import BeautifulReport
 import time
 from config.setting import LOG_PATH, REPORT_PATH
 from config import setting
+import os
 
 
 TEST_CLS = {
@@ -45,7 +51,7 @@ def load_case(suite):
                 for flo in flow_lis:
                     for loacl_key in flow_list_locals.keys():
                         if flow_list_locals[loacl_key] == flo:
-                            test_case_name = "test_%s" % (loacl_key)
+                            test_case_name = "test_%s" % loacl_key
                             set_case(TEST_CLS[key], test_case_name, remark=test_case_name)
 
 
@@ -59,8 +65,8 @@ if __name__ == '__main__':
     suite = unittest.TestSuite()
     load_case(suite)
     print(suite)
-    # unittest.TextTestRunner().run(suite)
-    result = BeautifulReport.BeautifulReport(suite)
-    result.report(setting.REPORT_CASE_NAME, get_report_name(), LOG_PATH, REPORT_PATH + '\\testReport')
+    unittest.TextTestRunner().run(suite)
+    # result = BeautifulReport.BeautifulReport(suite)
+    # result.report(setting.REPORT_CASE_NAME, get_report_name(), LOG_PATH, os.path.join(REPORT_PATH, 'testReport'))
 
 

@@ -9,6 +9,7 @@ from common.main_testing import router
 
 class WaitDealPage(MainTesting):
 
+    # 前置操作
     def pre_operation(self):
         self.driver.move_to('#tabmore')
         self.driver.click('待办')
@@ -31,6 +32,10 @@ class WaitDealPage(MainTesting):
             ' div.components-todo-formcontent__record_lists--29V_wNCX > div > div'
         )
         assert mark
+
+
+
+
 
 
 

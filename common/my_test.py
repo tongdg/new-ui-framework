@@ -21,7 +21,7 @@ HTML_IMG_TEMPLATE = """
 class MyTest(unittest.TestCase):
 
     def setUp(self):
-        logger.warning("=========================START=========================")
+        logger.warning("=========================START=========================\n")
         logger.debug("测试用例开始执行:{}".format(self._testMethodName))
         flo = self._testMethodName.split("test_")[1]
         print(flo)
@@ -48,13 +48,13 @@ class MyTest(unittest.TestCase):
 
     def tearDown(self):
         logger.debug("测试用例执行结束:{}".format(self._testMethodName))
-        logger.warning("========================= END =========================")
+        logger.warning("========================= END =========================\n")
 
 
 class MyMobileTest(unittest.TestCase):
 
     def setUp(self):
-        logger.warning("=========================START=========================")
+        logger.warning("=========================START=========================\n")
         logger.debug("测试用例开始执行:{}".format(self._testMethodName))
         flo = self._testMethodName.split("test_")[1]
         print(flo)
@@ -81,7 +81,7 @@ class MyMobileTest(unittest.TestCase):
 
     def tearDown(self):
         logger.debug("测试用例执行结束:{}".format(self._testMethodName))
-        logger.warning("========================= END =========================")
+        logger.warning("========================= END =========================\n")
 
 
 if __name__ == '__main__':

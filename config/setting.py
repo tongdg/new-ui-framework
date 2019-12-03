@@ -40,6 +40,8 @@ INTERVAL_TIME = 0.1
 # 设置测试浏览器
 browser = 'chrome'
 
+DEFAULT_MESSAGE_DURATION = 5
+
 
 
 # 设置高亮次数

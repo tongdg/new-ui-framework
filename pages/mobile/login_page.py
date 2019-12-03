@@ -18,12 +18,12 @@ class MobileLoginPage(MainTesting):
         self.driver.click(enterprise)
         self.driver.click('#root > div > div > div.home_tabbar___2b8uE '
                           '> div > div > div > div > div:nth-child(3) > p')
-        mark = self.driver.get_element_text(
-            self.driver.find_elements('#root > div > div > div.content___ItU_U > div.top___3gs4z > div.am-list.'
-                                      'avatar___1dflk > div > div > div.am-list-line.am-list-line-multiple >'
-                                      ' div.am-list-content')
-        )
+        mark = self.driver.get_attribute(selector='#root > div > div > div.content___ItU_U > div.top___3gs4z > '
+                                                  'div.am-list.avatar___1dflk > div > div > '
+                                                  'div.am-list-line.am-list-line-multiple > div.am-list-content',
+                                         attr='text')
         assert assert_value in mark
+
 
 
 

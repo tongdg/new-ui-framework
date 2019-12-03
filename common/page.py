@@ -15,18 +15,27 @@ from selenium.webdriver.remote.command import Command
 from common.own_error import SendKeysNoneError
 from selenium.webdriver import ActionChains
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
+import win32con
+import win32gui
+from seleniumbase.fixtures import js_utils
 
 
 class Page(Browser):
 
     def find_elements(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, ):
+        _selector = selector
         selector, by = self.__recalculate_selector(selector, by)
         logger.debug("find elements:(%s, %s)" % (by, selector))
-        self.driver_wait(selector, time_out, by)
+        try:
+            self.driver_wait(selector, time_out, by)
+        except Exception as e:
+            logger.error('find elements:(%s, %s) error, info: %s.' % (by, selector, e))
+            return False
         web_elements = self.driver.find_elements(by, selector)
         if len(web_elements) == 1:
             self.execute("arguments[0].focus();", web_elements[0])
-            self.alter_attribute('style', 'border: 2px solid red;', web_elements[0])
+            if 'tag=iframe' != _selector:
+                self.alter_attribute('style', 'border: 2px solid red;', web_elements[0])
             return web_elements[0]
         else:
             return web_elements
@@ -40,16 +49,47 @@ class Page(Browser):
 
     def click(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT,):
         """通过js进行元素点击"""
-        web_element = self.__unpack(selector, by, time_out)
+        web_elements = self.__unpack(selector, by, time_out)
+        if not web_elements:
+            raise TimeoutError('find element error!')
+        web_element = None
+        if isinstance(web_elements, list):
+            web_element = web_elements[0]
+        else:
+            web_element = web_elements
         if self.type == "ie":
             self.driver.execute(Command.W3C_CLEAR_ACTIONS)
             self.execute("arguments[0].click();", web_element)
         else:
-            web_element.click()
-        logger.info("click element:(%s, %s)" % (by, selector))
+            try:
+                web_element.click()
+            except Exception as e:
+                self.execute("arguments[0].click();", web_element)
+                logger.info('click error %s.' % e)
+        logger.info("click element: %s" % selector)
+
+    # 解决click点击无效，不报错的问题
+    def js_click(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT,):
+        web_elements = self.__unpack(selector, by, time_out)
+        if not web_elements:
+            raise TimeoutError('find element error!')
+        web_element = None
+        if isinstance(web_elements, list):
+            web_element = web_elements[0]
+        else:
+            web_element = web_elements
+        self.execute("arguments[0].click();", web_element)
+        logger.info("click element: %s" % selector)
 
     def move_to(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, ):
-        web_element = self.__unpack(selector, by, time_out)
+        web_elements = self.__unpack(selector, by, time_out)
+        if not web_elements:
+            raise TimeoutError('find element error!')
+        web_element = None
+        if isinstance(web_elements, list):
+            web_element = web_elements[0]
+        else:
+            web_element = web_elements
         """鼠标在指定元素悬停"""
         action = ActionChains(self.driver)
         action.reset_actions()
@@ -61,12 +101,19 @@ class Page(Browser):
             action.move_by_offset(x, y).perform()
         else:
             action.move_to_element(web_element).perform()
-        logger.info("move to element:(%s, %s)" % (by, selector))
+        logger.info("click element: %s" % selector)
 
     def send_keys(self, selector, text, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, ):
         if text is None:
             raise SendKeysNoneError('Please input your text.')
-        web_element = self.__unpack(selector, by, time_out)
+        web_elements = self.__unpack(selector, by, time_out)
+        if not web_elements:
+            raise TimeoutError('find element error!')
+        web_element = None
+        if isinstance(web_elements, list):
+            web_element = web_elements[0]
+        else:
+            web_element = web_elements
         self.wait(0.5)
         if self.is_displayed(web_element):
             web_element.clear()
@@ -76,7 +123,7 @@ class Page(Browser):
                 web_element.send_keys(i)
         else:
             web_element.send_keys(str(text))
-        logger.info("send keys to element:(%s, %s) value: %s" % (by, selector, text))
+        logger.info("send keys to element: %s value: %s" % (selector, text))
 
     def get_attribute(self, selector, attr, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT):
         logger.debug("get attributes to element:(%s, %s) name: %s" % (by, selector, attr))
@@ -167,6 +214,7 @@ class Page(Browser):
         else:
             return selector, by
 
+    # 等待元素消失
     def wait_element_disapper(self, selector, interval_time=setting.INTERVAL_TIME,
                               by=By.CSS_SELECTOR):
         selector, by = self.__recalculate_selector(selector, by)
@@ -184,27 +232,56 @@ class Page(Browser):
         except StaleElementReferenceException:
             logger.info('wait (%s, %s) end.' % (by, selector))
 
-    def get_element_text(self, element):
-        return element.text
-
-    def wait_element_disapper_true(self, selector, interval_time=setting.INTERVAL_TIME,
-                              by=By.CSS_SELECTOR):
+    # 元素没有消失，等待元素的display值由True变为False,或者由False变为True
+    def wait_element_change_display(self, selector, interval_time=setting.INTERVAL_TIME,
+                                   by=By.CSS_SELECTOR):
         selector, by = self.__recalculate_selector(selector, by)
         logger.info('wait (%s, %s) begin.' % (by, selector))
         all_time = 0
+        self.wait(0.5)
         self.driver_wait(selector=selector, by=by, time_out=5)
-        try:
+        if self.is_displayed(self.driver.find_element(by, selector)) is True:
             while self.is_displayed(self.driver.find_element(by, selector)) is True:
                 self.wait(interval_time)
                 all_time = all_time + interval_time
                 if all_time >= 5:
-                    logger.info('wait (%s, %s, %f) timeout.' % (by, selector, all_time))
+                    logger.info('wait (%s, %s, %f) true timeout.' % (by, selector, all_time))
                     break
-        except NoSuchElementException:
-            logger.info('wait (%s, %s) end.' % (by, selector))
-        except StaleElementReferenceException:
-            logger.info('wait (%s, %s) end.' % (by, selector))
+        else:
+            while self.is_displayed(self.driver.find_element(by, selector)) is False:
+                self.wait(interval_time)
+                all_time = all_time + interval_time
+                if all_time >= 5:
+                    logger.info('wait (%s, %s, %f) false timeout.' % (by, selector, all_time))
+                    break
+        logger.info('wait (%s, %s) end.' % (by, selector))
 
+    # 元素没有消失，等待元素的属性值改变,默认获取元素的文本属性值
+    def wait_element_change_attr(self, selector, attr_value, interval_time=setting.INTERVAL_TIME,
+                                   by=By.CSS_SELECTOR, attr='text', ):
+        selector, by = self.__recalculate_selector(selector, by)
+        logger.info('wait (%s, %s, %s) begin.' % (by, selector, attr_value))
+        all_time = 0
+        self.driver_wait(selector=selector, by=by, time_out=5)
+        while self.get_attribute(selector=self.driver.find_element(by, selector), attr=attr) in attr_value:
+            self.wait(interval_time)
+            all_time = all_time + interval_time
+            if all_time >= 5:
+                logger.info('wait (%s, %s, %f) timeout.' % (by, selector, all_time))
+                break
+        logger.info('wait (%s, %s, %s) end.' % (by, selector, attr_value))
+
+    def upload_file(self, path):
+        """上传附件"""
+        self.wait(2)
+        dialog = win32gui.FindWindow('#32770', u'打开')  # 识别对话框句柄
+        combo_box_ex32 = win32gui.FindWindowEx(dialog, 0, 'ComboBoxEx32', None)
+        combo_box = win32gui.FindWindowEx(combo_box_ex32, 0, 'ComboBox', None)
+        edit = win32gui.FindWindowEx(combo_box, 0, 'Edit', None)  # 找到输入框Edit对象的句柄
+        button = win32gui.FindWindowEx(dialog, 0, 'Button', None)  # 找到按钮Button
+        win32gui.SendMessage(edit, win32con.WM_SETTEXT, None, path)  # 往输入框输入绝对地址
+        win32gui.SendMessage(dialog, win32con.WM_COMMAND, 1, button)
+        logger.info("upload file: %s" % path)
 
 
 if __name__ == '__main__':
@@ -215,11 +292,38 @@ if __name__ == '__main__':
     page.send_keys('#pwd', '123456')
     page.click('#components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button')
     page.click('多租户空库0814')
-    page.move_to('#tabmore > div')
-    page.click('待办')
-    # page.switch_to_frame('tag=iframe')
-    # [print(element) for element in page.find_elements('tag=li')]
-    page.wait_element_disapper('待办任务')
+    page.move_to('#tabmore')
+    page.click('费用报销')
+    page.switch_to_frame('tag=iframe')
+    page.click('我的支出记录')
+    page.move_to('新增支出记录')
+    page.click('上传发票')
+    page.upload_file(r'C:\Users\Administrator\Desktop\发票\fapiao\机打\机打票_采购.jpg')
+    page.wait_element_change_display('Loading...')
+    assert page.find_elements('识别成功', 1)
+    page.move_to('生成支出记录')
+    page.click('逐条生成')
+    page.click('输入支出类型')
+    page.click('客户招待费用')
+    page.send_keys('#DEF_KHRS_005', 2)
+    page.send_keys('#DEF_BWYGRS_010', 1)
+    page.wait(1)
+    page.js_click('增加附件')
+    page.upload_file(r'C:\Users\Administrator\Desktop\发票\fapiao\机打\机打票_采购.jpg')
+    page.send_keys('#DEF_KHMC_006', 'sdfsdafsadfsd')
+    page.js_click('保 存')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -56,7 +56,6 @@ class MainTesting(object):
                     urlpatterns[key](n_self, *flow[key])
 
     def _get_ins(self, func):
-        print(func.__module__)
         m = __import__(name=func.__module__, fromlist=['pc', 'mobile'])
         for a in dir(m):
             attr = getattr(m, a)
@@ -73,6 +72,5 @@ class MainTesting(object):
 if __name__ == '__main__':
     MainTesting(flow_list=pc_flow, browser='chrome', )
     print(urlpatterns)
-
 
 
