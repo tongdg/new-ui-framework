@@ -13,7 +13,7 @@ class LoginPage(MainTesting):
     def login(self, usrname, password, enterprise, assert_value):
         self.driver.send_keys('#loginName', usrname)
         self.driver.send_keys('#pwd', password)
-        self.driver.click('#components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button')
+        self.driver.click('登 录')
         self.driver.click(enterprise)
         mark = self.driver.get_attribute(selector='#components-layout-top > ul > li:nth-child(4) > div > span',
                                          attr='title')

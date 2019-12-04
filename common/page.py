@@ -17,12 +17,17 @@ from selenium.webdriver import ActionChains
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 import win32con
 import win32gui
-from seleniumbase.fixtures import js_utils
+from selenium.common.exceptions import WebDriverException
 
 
 class Page(Browser):
 
-    def find_elements(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, ):
+    def find_elements(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, js_cheack=setting.JS_CHEACK):
+        # 查找元素先查看有没有JS报错
+        # self.judge_js_error()，这个还是不要写，页面本身报错也能执行
+        # setting.JS_CHEACK 默认值是False
+        if js_cheack:
+            self.judge_js_error()
         _selector = selector
         selector, by = self.__recalculate_selector(selector, by)
         logger.debug("find elements:(%s, %s)" % (by, selector))
@@ -47,9 +52,9 @@ class Page(Browser):
             web_element = self.find_elements(*args)
         return web_element
 
-    def click(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT,):
+    def click(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, js_cheack=setting.JS_CHEACK):
         """通过js进行元素点击"""
-        web_elements = self.__unpack(selector, by, time_out)
+        web_elements = self.__unpack(selector, by, time_out, js_cheack)
         if not web_elements:
             raise TimeoutError('find element error!')
         web_element = None
@@ -69,8 +74,8 @@ class Page(Browser):
         logger.info("click element: %s" % selector)
 
     # 解决click点击无效，不报错的问题
-    def js_click(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT,):
-        web_elements = self.__unpack(selector, by, time_out)
+    def js_click(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, js_cheack=setting.JS_CHEACK):
+        web_elements = self.__unpack(selector, by, time_out, js_cheack)
         if not web_elements:
             raise TimeoutError('find element error!')
         web_element = None
@@ -78,11 +83,12 @@ class Page(Browser):
             web_element = web_elements[0]
         else:
             web_element = web_elements
+        self.wait(0.5)
         self.execute("arguments[0].click();", web_element)
         logger.info("click element: %s" % selector)
 
-    def move_to(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, ):
-        web_elements = self.__unpack(selector, by, time_out)
+    def move_to(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, js_cheack=setting.JS_CHEACK):
+        web_elements = self.__unpack(selector, by, time_out, js_cheack)
         if not web_elements:
             raise TimeoutError('find element error!')
         web_element = None
@@ -103,10 +109,10 @@ class Page(Browser):
             action.move_to_element(web_element).perform()
         logger.info("click element: %s" % selector)
 
-    def send_keys(self, selector, text, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, ):
+    def send_keys(self, selector, text, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, js_cheack=setting.JS_CHEACK):
         if text is None:
             raise SendKeysNoneError('Please input your text.')
-        web_elements = self.__unpack(selector, by, time_out)
+        web_elements = self.__unpack(selector, by, time_out, js_cheack)
         if not web_elements:
             raise TimeoutError('find element error!')
         web_element = None
@@ -114,7 +120,6 @@ class Page(Browser):
             web_element = web_elements[0]
         else:
             web_element = web_elements
-        self.wait(0.5)
         if self.is_displayed(web_element):
             web_element.clear()
         if self.type == "ie":
@@ -123,20 +128,21 @@ class Page(Browser):
                 web_element.send_keys(i)
         else:
             web_element.send_keys(str(text))
+        self.wait(0.5)
         logger.info("send keys to element: %s value: %s" % (selector, text))
 
-    def get_attribute(self, selector, attr, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT):
+    def get_attribute(self, selector, attr, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, js_cheack=setting.JS_CHEACK):
         logger.debug("get attributes to element:(%s, %s) name: %s" % (by, selector, attr))
         try:
-            web_element = self.__unpack(selector, by, time_out)
+            web_element = self.__unpack(selector, by, time_out, js_cheack)
             return getattr(web_element, attr) if hasattr(web_element, attr) else web_element.get_attribute(attr)
         except Exception:
             return ''
 
-    def get_attributes(self, selector, attr, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT):
+    def get_attributes(self, selector, attr, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, js_cheack=setting.JS_CHEACK):
         values = []
         logger.debug("get attributes to element:(%s, %s) name: %s" % (by, selector, attr))
-        web_elements = self.__unpack(selector, by, time_out)
+        web_elements = self.__unpack(selector, by, time_out, js_cheack)
         for web_element in web_elements:
             try:
                 values.append(getattr(web_element, attr) if hasattr(web_element, attr) else web_element.get_attribute(attr))
@@ -283,6 +289,20 @@ class Page(Browser):
         win32gui.SendMessage(dialog, win32con.WM_COMMAND, 1, button)
         logger.info("upload file: %s" % path)
 
+    def judge_js_error(self):
+        self.wait(0.1)
+        try:
+            browser_logs = self.driver.get_log('browser')
+        except (ValueError, WebDriverException):
+            return
+        errors = []
+        for entry in browser_logs:
+            if entry['level'] == 'SEVERE':
+                errors.append(entry)
+        if len(errors) > 0:
+            raise Exception(
+                "JavaScript errors found on %s => %s" % (self.current_url, errors))
+
 
 if __name__ == '__main__':
 
@@ -307,11 +327,11 @@ if __name__ == '__main__':
     page.click('客户招待费用')
     page.send_keys('#DEF_KHRS_005', 2)
     page.send_keys('#DEF_BWYGRS_010', 1)
-    page.wait(1)
+    page.send_keys('#DEF_KHMC_006', 'sdfsdafsadfsd')
     page.js_click('增加附件')
     page.upload_file(r'C:\Users\Administrator\Desktop\发票\fapiao\机打\机打票_采购.jpg')
-    page.send_keys('#DEF_KHMC_006', 'sdfsdafsadfsd')
     page.js_click('保 存')
+    assert page.find_elements('保存成功！')
 
 
 

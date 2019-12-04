@@ -40,17 +40,15 @@ INTERVAL_TIME = 0.1
 # 设置测试浏览器
 browser = 'chrome'
 
-DEFAULT_MESSAGE_DURATION = 5
-
-
-
-# 设置高亮次数
-HIGHLIGHTS = 4
+# 是否打开页面的JS校验
+JS_CHEACK = False
 
 # 移动端设置
 
 # 常用元素按钮定位xpath
 TEXT_XPATH = "//*[text()='%s']"
+CLICK_XPATH = TEXT_XPATH + r"/.."
+SEND_KEYS_XPATH = TEXT_XPATH + r"/following::span[1]/div"
 
 
 

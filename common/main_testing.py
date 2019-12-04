@@ -68,6 +68,14 @@ class MainTesting(object):
         self.driver = driver
         return self
 
+    # 前置步骤，继承即可
+    def pre_operation(self):
+        pass
+
+    # 后置步骤，继承即可
+    def pos_operation(self):
+        pass
+
 
 if __name__ == '__main__':
     MainTesting(flow_list=pc_flow, browser='chrome', )
