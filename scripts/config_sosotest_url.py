@@ -6,6 +6,7 @@ if __name__ == '__main__':
     import os
     BASE_PATH = os.path.split(os.path.dirname(os.path.abspath(__file__)))[0]
     sys.path.append(BASE_PATH)
+    print(sys.path)
     from common import page
 
     EVOR_KEY = '虚拟化环境'
