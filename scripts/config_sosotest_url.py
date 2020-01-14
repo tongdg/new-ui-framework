@@ -8,7 +8,13 @@ if __name__ == '__main__':
     sys.path.append(BASE_PATH)
     print(sys.path)
     from common import page
-
+    from config.setting import LOG_PATH, REPORT_PATH
+    test_report = os.path.join(REPORT_PATH, 'testReport')
+    if not os.path.exists(test_report):
+        os.makedirs(test_report)
+    if not os.path.exists(LOG_PATH):
+        os.makedirs(LOG_PATH)
+        
     EVOR_KEY = '虚拟化环境'
     VM_IP = sys.argv[1]
     driver = page.Page()
