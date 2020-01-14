@@ -49,6 +49,8 @@ if __name__ == '__main__':
             driver.click(operation)
             break
 
+    driver.quit()
+
 
 
 
