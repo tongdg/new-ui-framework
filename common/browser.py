@@ -138,8 +138,9 @@ class Browser(object):
         return self.driver
 
     def quit(self):
-        self.driver.quit()
         logger.info("quit browser")
+        self.driver.quit()
+
 
     def close(self):
         self.driver.close()
