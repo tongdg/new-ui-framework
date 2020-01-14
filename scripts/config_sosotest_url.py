@@ -14,7 +14,7 @@ if __name__ == '__main__':
         os.makedirs(test_report)
     if not os.path.exists(LOG_PATH):
         os.makedirs(LOG_PATH)
-        
+
     EVOR_KEY = '虚拟化环境'
     VM_IP = sys.argv[1]
     driver = page.Page()
