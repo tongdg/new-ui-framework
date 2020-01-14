@@ -16,8 +16,8 @@ if __name__ == '__main__':
         os.makedirs(LOG_PATH)
 
     EVOR_KEY = '虚拟化环境'
-    # VM_IP = sys.argv[1]
-    VM_IP = 'http://192.168.32.195'
+    VM_IP = sys.argv[1]
+    # VM_IP = 'http://192.168.32.195'
     driver = page.Page()
     try:
         driver.get('http://192.168.32.195:8000/')
