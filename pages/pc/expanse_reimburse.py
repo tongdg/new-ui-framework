@@ -11,7 +11,7 @@ class ExpanseReimburse(MainTesting):
     def pre_operation(self):
         self.driver.move_to('#tabmore')
         self.driver.click('费用报销')
-        self.driver.switch_to_frame('tag=iframe')
+        self.driver.switch_to_frame("//main[@class='ant-layout-content']/section/section/iframe")
 
     @router(r'add_pay_record')
     def add_pay_record(self, invoice_path, enclosure_path):
@@ -24,12 +24,13 @@ class ExpanseReimburse(MainTesting):
         self.driver.wait_element_change_display('Loading...')
         assert self.driver.find_elements('识别成功', time_out=2)
         self.driver.move_to('生成支出记录')
-        if self.driver.find_elements('汇总生成', time_out=3):
-            self.driver.click('汇总生成')
-        else:
+        if self.driver.find_elements('逐条生成', time_out=3):
             self.driver.click('逐条生成')
-        self.driver.click('输入支出类型')
-        self.driver.click('客户招待费用')
+        else:
+            self.driver.click('汇总生成')
+        # self.driver.click('/html/body/div[3]/div/div[2]/div/div/div[2]/div[1]/div[1]/form/div[1]/div/'
+        #                   'div[2]/div/span/span/div/span/span/span[1]')
+        # self.driver.click('客户招待费用')
         # self.driver.send_keys('#AMOUNT', 50)
         self.driver.send_keys('#DEF_KHRS_005', 2)
         self.driver.send_keys('#DEF_BWYGRS_010', 1)
@@ -66,7 +67,7 @@ class ExpanseReimburse(MainTesting):
         self.driver.send_keys('#editor > div > div > div > div:nth-child(4) > div:nth-child(2) > div > div > div > '
                               'span.field_control > div > input', '直属经理')
         self.driver.send_keys('#editor > div > div > div > div:nth-child(4) > div:nth-child(3) > div > div > div > '
-                              'span.field_control > div > input','892431872@qq.com')
+                              'span.field_control > div > input', '892431872@qq.com')
         self.driver.click('提交')
 
 

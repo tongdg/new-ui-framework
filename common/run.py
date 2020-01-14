@@ -64,14 +64,13 @@ def get_report_name(name='TestResult'):
 if __name__ == '__main__':
     suite = unittest.TestSuite()
     load_case(suite)
-    print(suite)
     test_report = os.path.join(REPORT_PATH, 'testReport')
     if not os.path.exists(test_report):
         os.makedirs(test_report)
     if not os.path.exists(LOG_PATH):
         os.makedirs(LOG_PATH)
-    result = BeautifulReport.BeautifulReport(suite)
-    result.report(setting.REPORT_CASE_NAME, get_report_name(), LOG_PATH, test_report)
-    # unittest.TextTestRunner().run(suite)
+    # result = BeautifulReport.BeautifulReport(suite)
+    # result.report(setting.REPORT_CASE_NAME, get_report_name(), LOG_PATH, test_report)
+    unittest.TextTestRunner().run(suite)
 
 

@@ -30,6 +30,7 @@ class MyTest(unittest.TestCase):
 
     def test_case(self):
         test = MainTesting(self.flow_list, setting.browser, 'pc')
+        print(111111111)
         test.driver.get(setting.url)
         try:
             test.main(self.flow_list)

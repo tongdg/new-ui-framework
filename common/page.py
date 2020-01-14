@@ -39,8 +39,6 @@ class Page(Browser):
         web_elements = self.driver.find_elements(by, selector)
         if len(web_elements) == 1:
             self.execute("arguments[0].focus();", web_elements[0])
-            if 'tag=iframe' != _selector:
-                self.alter_attribute('style', 'border: 2px solid red;', web_elements[0])
             return web_elements[0]
         else:
             return web_elements
@@ -53,7 +51,6 @@ class Page(Browser):
         return web_element
 
     def click(self, selector, by=By.CSS_SELECTOR, time_out=setting.TIMEOUT, js_cheack=setting.JS_CHEACK):
-        """通过js进行元素点击"""
         web_elements = self.__unpack(selector, by, time_out, js_cheack)
         if not web_elements:
             raise TimeoutError('find element error!')
@@ -62,6 +59,7 @@ class Page(Browser):
             web_element = web_elements[0]
         else:
             web_element = web_elements
+        self.alter_attribute('style', 'border: 2px solid red;', web_element)
         if self.type == "ie":
             self.driver.execute(Command.W3C_CLEAR_ACTIONS)
             self.execute("arguments[0].click();", web_element)
@@ -83,6 +81,7 @@ class Page(Browser):
             web_element = web_elements[0]
         else:
             web_element = web_elements
+        self.alter_attribute('style', 'border: 2px solid red;', web_elements)
         self.wait(0.5)
         self.execute("arguments[0].click();", web_element)
         logger.info("click element: %s" % selector)
@@ -97,6 +96,7 @@ class Page(Browser):
         else:
             web_element = web_elements
         """鼠标在指定元素悬停"""
+        self.alter_attribute('style', 'border: 2px solid red;', web_element)
         action = ActionChains(self.driver)
         action.reset_actions()
         if self.type == 'ie':
@@ -120,6 +120,7 @@ class Page(Browser):
             web_element = web_elements[0]
         else:
             web_element = web_elements
+        self.alter_attribute('style', 'border: 2px solid red;', web_element)
         if self.is_displayed(web_element):
             web_element.clear()
         if self.type == "ie":
@@ -135,6 +136,7 @@ class Page(Browser):
         logger.debug("get attributes to element:(%s, %s) name: %s" % (by, selector, attr))
         try:
             web_element = self.__unpack(selector, by, time_out, js_cheack)
+            self.alter_attribute('style', 'border: 2px solid red;', web_element)
             return getattr(web_element, attr) if hasattr(web_element, attr) else web_element.get_attribute(attr)
         except Exception:
             return ''
@@ -144,6 +146,7 @@ class Page(Browser):
         logger.debug("get attributes to element:(%s, %s) name: %s" % (by, selector, attr))
         web_elements = self.__unpack(selector, by, time_out, js_cheack)
         for web_element in web_elements:
+            self.alter_attribute('style', 'border: 2px solid red;', web_element)
             try:
                 values.append(getattr(web_element, attr) if hasattr(web_element, attr) else web_element.get_attribute(attr))
             except Exception:
@@ -306,32 +309,87 @@ class Page(Browser):
 
 if __name__ == '__main__':
 
+    import datetime
+
+    DATA = datetime.datetime.now()
+    YMD = str(DATA).split(' ')[0]
+    TIME = '10:30:00-22:00'
+    TYPE = '产品研发工作'
+    PROJECT_NAME = 'YNC元年云'
+    IS = '无'
+    DEPARTMENT = '云业务测试部'
+    CONTENT = '01.02版本白屏问题跟踪，sosotest_jenkins脚本编写'
+    WORK_TIME = '11.5'
+    NOTE = '测试'
+
     page = Page()
-    page.get('http://app.yuanian.com')
-    page.send_keys('//*[@id="loginName"]', 'tong')
-    page.send_keys('#pwd', '123456')
-    page.click('#components-form-demo-normal-login > form > div:nth-child(4) > div > div > span > button')
-    page.click('多租户空库0814')
-    page.move_to('#tabmore')
-    page.click('费用报销')
-    page.switch_to_frame('tag=iframe')
-    page.click('我的支出记录')
-    page.move_to('新增支出记录')
-    page.click('上传发票')
-    page.upload_file(r'C:\Users\Administrator\Desktop\发票\fapiao\机打\机打票_采购.jpg')
-    page.wait_element_change_display('Loading...')
-    assert page.find_elements('识别成功', 1)
-    page.move_to('生成支出记录')
-    page.click('逐条生成')
-    page.click('输入支出类型')
-    page.click('客户招待费用')
-    page.send_keys('#DEF_KHRS_005', 2)
-    page.send_keys('#DEF_BWYGRS_010', 1)
-    page.send_keys('#DEF_KHMC_006', 'sdfsdafsadfsd')
-    page.js_click('增加附件')
-    page.upload_file(r'C:\Users\Administrator\Desktop\发票\fapiao\机打\机打票_采购.jpg')
-    page.js_click('保 存')
-    assert page.find_elements('保存成功！')
+    page.get('http://gs.yuanian.com/gs/login.aspx')
+    page.send_keys('#usernameInput', '15216625816')
+    page.send_keys('#passwordInput', '999999')
+    page.click('#submitButton')
+    page.click('支出')
+    page.click('标准填单')
+    page.switch_to_frame('#LAY_app_body > div.layadmin-tabsbody-item.layui-show > iframe')
+    page.click('#inBudgetBillTree_2_span')
+
+    page.switch_to_frame('#iframe_billviewer')
+    GET_YMD = page.get_attribute('#f_viewport > tbody > tr:nth-child(4) > td.s3s45 > input', attr='value')
+    if GET_YMD == YMD:
+        pass
+    else:
+        page.click('#f_viewport > tbody > tr:nth-child(4) > td.s3s45 > input')
+        D = YMD.split('-')[2]
+    page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s90 > input', TIME)
+    page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s91 > input.biankuang')
+    page.click(TYPE)
+
+    page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s92 > input.biankuang')
+    page.send_keys('#_filterBar', PROJECT_NAME)
+    page.click('#_filterButton')
+    page.click('#_treeInstance_2_span')
+
+    page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s93 > input.biankuang')
+    page.click('#_filterButton')
+    page.click(IS)
+
+    page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s94 > input.biankuang')
+    page.send_keys('#_filterBar', DEPARTMENT)
+    page.click('#_filterButton')
+    page.click('#_treeInstance_2_span')
+
+    page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s95 > textarea', CONTENT)
+
+    page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s96 > input', WORK_TIME)
+
+    page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s97 > textarea', NOTE)
+
+    page.click('#flow_submit')
+    page.wait(1)
+    page.switch_to_frame('#layui-layer-iframe2')
+
+    page.click('#btnOK')
+    # page.click('#contractTable2 > table > tbody > tr:nth-child(8) > td:nth-child(2) > input.layui-btn.layui-btn-primary.layui-bg-gray')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

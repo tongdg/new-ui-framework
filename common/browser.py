@@ -43,7 +43,7 @@ chrome_arguments = [
 ]
 
 # 以iPhone X的模式打开浏览器
-chrome_mobileEmulation ={
+chrome_mobileEmulation = {
     'deviceName': 'iPhone X'
 }
 
@@ -131,7 +131,7 @@ class Browser(object):
         return title
 
     def wait(self, seconds=1):
-        time.sleep(1)
+        time.sleep(seconds)
         logger.info("wait %f seconds" % seconds)
 
     def get_driver(self):

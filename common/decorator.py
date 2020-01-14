@@ -11,6 +11,8 @@ rpc_infp = {}
 # 就不用传
 # instance 判断是判断1个元素是不是2个元素的子类，第一个传的是对象，第二个传的是类型
 
+urlpatterns = dict()
+
 
 def xmlrpc(in_=(), out=(type(None),)):
 
@@ -49,3 +51,5 @@ def xmlrpc(in_=(), out=(type(None),)):
             return res
         return __xmlrpc
     return _xmlrpc
+
+

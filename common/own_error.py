@@ -22,3 +22,6 @@ class ClickElementTooMuchError(Exception):
 
 class InitError(Exception):
     pass
+
+class AlterSheetError(Exception):
+    pass

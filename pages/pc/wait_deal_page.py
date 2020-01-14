@@ -90,6 +90,3 @@ class WaitDealPage(MainTesting):
 
 
 
-
-
-

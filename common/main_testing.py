@@ -8,10 +8,8 @@ from functools import wraps
 from common.own_error import InitError
 from common.page import Page
 from data.flow_list import pc_flow
-
-
-urlpatterns = dict()
-
+from utils import pubilc_utils
+from common.decorator import urlpatterns
 
 # 将url与方法绑定
 def router(urlk):
@@ -33,11 +31,11 @@ class MainTesting(object):
         if dev.lower() == 'pc':
             # 导入的同时，执行了init文件的代码，把相应的模块加到了sys.modules
             from pages import pc
+            import sys
             self.DEV = 'pc'
         elif dev.lower() == 'mobile':
             from pages import mobile
             self.DEV = 'mobile'
-            print(urlpatterns)
         else:
             raise InitError('Invalid dev, dev is \'pc\' or \'mobile\'')
         self.driver = Page(browser_type=browser, dev=dev)
@@ -51,7 +49,7 @@ class MainTesting(object):
                     if flow[key] == '':
                         urlpatterns[key](n_self, )
                     else:
-                        urlpatterns[key](n_self, flow[key])
+                        urlpatterns[key](n_self, pubilc_utils.str_to_list(flow[key]))
                 else:
                     urlpatterns[key](n_self, *flow[key])
 
@@ -78,7 +76,9 @@ class MainTesting(object):
 
 
 if __name__ == '__main__':
-    MainTesting(flow_list=pc_flow, browser='chrome', )
+    test = MainTesting(flow_list=pc_flow, browser='chrome', )
     print(urlpatterns)
+
+
 
 

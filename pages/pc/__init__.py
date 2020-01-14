@@ -1,29 +1,27 @@
-from .login_page import LoginPage
-from .wait_deal_page import WaitDealPage
-from .expanse_reimburse import ExpanseReimburse
+# from .login_page import LoginPage
+# from .wait_deal_page import WaitDealPage
+# from .expanse_reimburse import ExpanseReimburse
 
-# import os
-# import sys
-# base = os.path.split(os.path.dirname(os.path.abspath(__file__)))[0]
-# path = os.path.join(base, 'pc')
-# lis = os.listdir(path)
-# lis.remove('__init__.py')
-# lis.remove('__pycache__')
-# names = []
-#
-# __import__(name='pages.pc', fromlist=lis)
-# for li in lis:
-#     names.append('pages.pc.%s' % li.split('.')[0])
-# for name in names:
-#     pc_module = sys.modules[name]
-#     for pc_dir in dir(pc_module):
-#         pc_attr = getattr(pc_module, pc_dir)
-#         if type(pc_attr) == type and pc_attr != getattr(pc_module, 'MainTesting'):
-#             __import__(name=name, fromlist=['pc', pc_dir])
-#
-#
-# print(locals())
+import os
+import sys
 
+
+def __get_module_info():
+    pc_module_path = os.path.dirname(os.path.abspath(__file__))
+    pc_module_file = os.listdir(pc_module_path)
+    pc_module_file.remove('__init__.py')
+    pc_module_file.remove('__pycache__')
+    m = __import__('pages.pc', fromlist=pc_module_file)
+    return m, pc_module_file, pc_module_path
+
+
+for pmf in __get_module_info()[1]:
+    __pmp = __get_module_info()[2].split('\\')
+    __m = sys.modules['%s.%s.%s' %(__pmp[2], __pmp[3], pmf.split('.')[0])]
+    __main_class = getattr(__m, 'MainTesting')
+    for d in dir(__m):
+        if type(getattr(__m, d)) == type and getattr(__m, d) != __main_class:
+            exec('from %s import %s' % ('pages.pc.' + pmf.split('.')[0], d))
 
 
 
