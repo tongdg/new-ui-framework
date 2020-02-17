@@ -1,6 +1,5 @@
 
 
-
 if __name__ == '__main__':
     import sys
     import os
@@ -28,6 +27,7 @@ if __name__ == '__main__':
         driver.click('#sidebar-menu > div > ul > li.current-page > a')
         num = len(driver.find_elements('#EditVars > table > tbody > tr'))
         print(num)
+        driver.quit()
         for i in range(1, num+1):
             print('#EditVars > table > tbody > tr:nth-child(%s) > td:nth-child(%s) > textarea' % (i, 2))
             evor_key = driver.get_attribute(

@@ -17,7 +17,7 @@ def __get_module_info():
 
 for pmf in __get_module_info()[1]:
     __pmp = __get_module_info()[2].split('\\')
-    __m = sys.modules['%s.%s.%s' %(__pmp[2], __pmp[3], pmf.split('.')[0])]
+    __m = sys.modules['%s.%s.%s' % (__pmp[2], __pmp[3], pmf.split('.')[0])]
     __main_class = getattr(__m, 'MainTesting')
     for d in dir(__m):
         if type(getattr(__m, d)) == type and getattr(__m, d) != __main_class:

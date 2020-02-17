@@ -308,66 +308,68 @@ class Page(Browser):
 
 
 if __name__ == '__main__':
-
-    import datetime
-
-    DATA = datetime.datetime.now()
-    YMD = str(DATA).split(' ')[0]
-    TIME = '10:30:00-22:00'
-    TYPE = '产品研发工作'
-    PROJECT_NAME = 'YNC元年云'
-    IS = '无'
-    DEPARTMENT = '云业务测试部'
-    CONTENT = '01.02版本白屏问题跟踪，sosotest_jenkins脚本编写'
-    WORK_TIME = '11.5'
-    NOTE = '测试'
-
     page = Page()
-    page.get('http://gs.yuanian.com/gs/login.aspx')
-    page.send_keys('#usernameInput', '15216625816')
-    page.send_keys('#passwordInput', '999999')
-    page.click('#submitButton')
-    page.click('支出')
-    page.click('标准填单')
-    page.switch_to_frame('#LAY_app_body > div.layadmin-tabsbody-item.layui-show > iframe')
-    page.click('#inBudgetBillTree_2_span')
 
-    page.switch_to_frame('#iframe_billviewer')
-    GET_YMD = page.get_attribute('#f_viewport > tbody > tr:nth-child(4) > td.s3s45 > input', attr='value')
-    if GET_YMD == YMD:
-        pass
-    else:
-        page.click('#f_viewport > tbody > tr:nth-child(4) > td.s3s45 > input')
-        D = YMD.split('-')[2]
-    page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s90 > input', TIME)
-    page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s91 > input.biankuang')
-    page.click(TYPE)
-
-    page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s92 > input.biankuang')
-    page.send_keys('#_filterBar', PROJECT_NAME)
-    page.click('#_filterButton')
-    page.click('#_treeInstance_2_span')
-
-    page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s93 > input.biankuang')
-    page.click('#_filterButton')
-    page.click(IS)
-
-    page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s94 > input.biankuang')
-    page.send_keys('#_filterBar', DEPARTMENT)
-    page.click('#_filterButton')
-    page.click('#_treeInstance_2_span')
-
-    page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s95 > textarea', CONTENT)
-
-    page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s96 > input', WORK_TIME)
-
-    page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s97 > textarea', NOTE)
-
-    page.click('#flow_submit')
-    page.wait(1)
-    page.switch_to_frame('#layui-layer-iframe2')
-
-    page.click('#btnOK')
+    # 以下是公司内部用 参照写即可
+    # import datetime
+    #
+    # DATA = datetime.datetime.now()
+    # YMD = str(DATA).split(' ')[0]
+    # TIME = '9:30-18:30'
+    # TYPE = '产品研发工作'
+    # PROJECT_NAME = 'YNC元年云'
+    # IS = '无'
+    # DEPARTMENT = '云业务测试部'
+    # CONTENT = '编写2月自动计划，整理年前移动端遗留问题'
+    # WORK_TIME = '9'
+    # NOTE = '测试'
+    #
+    # page = Page()
+    # page.get('http://gs.yuanian.com/gs/login.aspx')
+    # page.send_keys('#usernameInput', '**************')
+    # page.send_keys('#passwordInput', '**************')
+    # page.click('#submitButton')
+    # page.click('支出')
+    # page.click('标准填单')
+    # page.switch_to_frame('#LAY_app_body > div.layadmin-tabsbody-item.layui-show > iframe')
+    # page.click('#inBudgetBillTree_2_span')
+    #
+    # page.switch_to_frame('#iframe_billviewer')
+    # GET_YMD = page.get_attribute('#f_viewport > tbody > tr:nth-child(4) > td.s3s45 > input', attr='value')
+    # if GET_YMD == YMD:
+    #     pass
+    # else:
+    #     page.click('#f_viewport > tbody > tr:nth-child(4) > td.s3s45 > input')
+    #     D = YMD.split('-')[2]
+    # page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s90 > input', TIME)
+    # page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s91 > input.biankuang')
+    # page.click(TYPE)
+    #
+    # page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s92 > input.biankuang')
+    # page.send_keys('#_filterBar', PROJECT_NAME)
+    # page.click('#_filterButton')
+    # page.click('#_treeInstance_2_span')
+    #
+    # page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s93 > input.biankuang')
+    # page.click('#_filterButton')
+    # page.click(IS)
+    #
+    # page.click('#f_viewport > tbody > tr:nth-child(8) > td.s7s94 > input.biankuang')
+    # page.send_keys('#_filterBar', DEPARTMENT)
+    # page.click('#_filterButton')
+    # page.click('#_treeInstance_2_span')
+    #
+    # page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s95 > textarea', CONTENT)
+    #
+    # page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s96 > input', WORK_TIME)
+    #
+    # page.send_keys('#f_viewport > tbody > tr:nth-child(8) > td.s7s97 > textarea', NOTE)
+    #
+    # page.click('#flow_submit')
+    # page.wait(1)
+    # page.switch_to_frame('#layui-layer-iframe2')
+    #
+    # page.click('#btnOK')
     # page.click('#contractTable2 > table > tbody > tr:nth-child(8) > td:nth-child(2) > input.layui-btn.layui-btn-primary.layui-bg-gray')
 
 
